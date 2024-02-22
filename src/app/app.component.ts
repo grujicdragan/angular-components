@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'order-confirmation';
+  toAnimate = false;
+
+  onOrderComplete(): void {
+    this.toAnimate = true;
+      setTimeout(() => {
+        this.toAnimate = false
+      }, 10000);
+  }
 }
